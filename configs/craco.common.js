@@ -1,6 +1,6 @@
-const path = require("path");
+const path = require('path');
 const PATH_SRC = path.resolve(`${__dirname}/../src`);
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devServer: {
@@ -8,12 +8,12 @@ module.exports = {
     },
     webpack: {
         alias: {
-            "@features": `${PATH_SRC}/features/`,
-            "@entities": `${PATH_SRC}/entities/`,
-            "@shared": `${PATH_SRC}/shared/`,
-            "@widgets": `${PATH_SRC}/widgets/`,
-            "@pages": `${PATH_SRC}/pages/`,
-            "@app": `${PATH_SRC}/app/`,
+            '@features': `${PATH_SRC}/features/`,
+            '@entities': `${PATH_SRC}/entities/`,
+            '@shared': `${PATH_SRC}/shared/`,
+            '@widgets': `${PATH_SRC}/widgets/`,
+            '@pages': `${PATH_SRC}/pages/`,
+            '@app': `${PATH_SRC}/app/`,
         },
         plugins: {
             add: [
@@ -22,16 +22,15 @@ module.exports = {
                         patterns: [
                             {
                                 from: 'src/content.ts',
-                                to: '.'
+                                to: '.',
                             },
                             {
                                 from: 'src/background.ts',
-                                to: '.'
-                            }
+                                to: '.',
+                            },
                         ],
-
                     }),
-                    "append",
+                    'append',
                 ],
             ],
         },
