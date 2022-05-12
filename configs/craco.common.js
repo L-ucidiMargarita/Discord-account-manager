@@ -19,17 +19,16 @@ module.exports = {
             add: [
                 [
                     new CopyPlugin({
-                        patterns: [{
-                            from: "public",
-                            to: ".",
-                            filter: async (resourcePath) => {
-                                if (/index.html/i.test(resourcePath)) {
-                                    return false
-                                }
-
-                                return true;
+                        patterns: [
+                            {
+                                from: 'src/content.ts',
+                                to: '.'
                             },
-                        }],
+                            {
+                                from: 'src/background.ts',
+                                to: '.'
+                            }
+                        ],
 
                     }),
                     "append",

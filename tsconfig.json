@@ -4,9 +4,9 @@
   ],
   "include": [
     "src",
-    "declaration.d.ts"
+    "./declaration.d.ts"
   ],
-  "extends": "./configs/tsconfig.paths",
+  "extends": "./configs/tsconfig.paths.json",
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
